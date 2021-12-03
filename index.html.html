@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="./randomPelis.js"></script>
+    <link rel="stylesheet" href="./randomPelis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Random Pelis</title>
+</head>
+<body>
+  <!--Inicio-->
+    <div id="inicioP" onclick="inicioCosas()">
+        <h1 id="bInicio">Random Pelis</h1>
+        <p>by Damaris</p>
+    </div>
+
+  <!--Navegador-->  
+    <div id="navv" onclick="navCosas()" class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button onclick="homee()" class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+      <button onclick="recoo()" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Recomendation</button>
+      <button onclick="toppP()" class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Top Movies</button>
+      <form class="d-flex">
+        <input id="inputt" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button onclick="searchh()" id="buscador" class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <!--Texto que aparece en el NAV-->
+    <div id="pags">
+        <div id="home">
+            <h1>Welcome to our page!</h1>
+            <h5>Here you can find any movie you want to watch, recomendations, the top 10 of the most view movies, and much other things.</h5>
+            <p>You can start looking for information of movies you want to watch :)</p>
+        </div>
+        <div id="reco">
+            <h1>The random recomendation is...</h1>
+            <p id="recoRan"></p>
+        </div>
+        <div id="topp">
+            <h1>Top Movies</h1>
+            <p id="topPel"></p>
+        </div>
+        <div id="search">
+          <p>Holis</p>
+        </div>
+  </div>
+    <nav>
+</body>
+</html>
