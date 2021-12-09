@@ -124,31 +124,40 @@ info, título, rating)*/
     justify-content: center;
     align-items: center;
 }
+
+#pInicio{
+    margin-left: 180px;
+}
+
 #bInicio{
     cursor: pointer;
     font-weight: bolder;    
+    margin-left: 180px; 
 }
 
 button{
     cursor: pointer;
 }
 
-#home{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    width: 800px;
+#title{
+    font-size: 60px;    
+    margin-top: 150px;
+    margin-left: 150px;
 }
 
-.center , .flex{
-    display: flex;
+#homeText{
+    font-size: xx-large;
+    margin-left: 150px;
+}
+.display{
+    text-align: center;
 }
 
 .flex-container{
     padding: 0;
-    margin: 0;
+    margin-top: 250px;
+    margin-left: 300px;
     list-style: none;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -157,7 +166,7 @@ button{
     width: 800px;
     margin: 10px;
     text-align: center;
-  }
+}
 
 /*Block*/
 #navv , #pags , #home, #reco, #topp , #searchh , #main{

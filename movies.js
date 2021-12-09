@@ -1,7 +1,8 @@
 const APIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
-const RECOMENDATIONS = "https://api.themoviedb.org/3/movie/recommendations?api_key=e308cbf37e9345b73b598e3be38f321b&language=en-US&page=1"
+const RECOMENDATIONS = "https://api.themoviedb.org/3/movie/";
+const RECOMENDATIONS2 = "?api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
@@ -87,11 +88,20 @@ form.addEventListener("submit", (e) => {
     document.getElementById("main").innerHTML = respData[i];
 }, false)*/
 
-/*getMovies(RECOMENDATIONS);
-function rondomReco(){
+function randomReco(){
     console.log("hola")
-    console.log(respData.results["0"]);
-}*/
+    let x = 100;
+    async function moviesReco(x) {
+        const resp = await fetch(RECOMENDATIONS + x + RECOMENDATIONS2);
+        const respData = await resp.json(x);
+    
+        console.log(respData);
+
+        document.getElementById("peliRandom").innerText=respData.original_title;
+        document.getElementById("imgRandom").src= 'https://image.tmdb.org/t/p/w1280/8kSerJrhrJWKLk1LViesGcnrUPE.jpg';
+    }
+    moviesReco(x)
+}
 
 
 //Bloqueamos y desbloqueamos páginas dependiendo del botón en el cual le piques
@@ -124,6 +134,7 @@ function recoo(){
     document.getElementById("searchh").style.display="block";
     document.getElementById("buscar").style.display="none";
     document.getElementById("main").style.display="none";
+    randomReco();
 }
 
 function toppP(){

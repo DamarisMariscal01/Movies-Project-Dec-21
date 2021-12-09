@@ -19,8 +19,8 @@
 <body>
   <!--Inicio-->
     <div id="inicioP" class="flex-container" onclick="inicioCosas()">
-        <h1 id="bInicio">Random Pelis</h1>
-        <p>by Damaris</p>
+        <h1 id="bInicio">Pelis Pelis Pelis</h1>
+        <p id="pInicio">by Damaris</p>
     </div>
 
   <!--Navegador-->
@@ -44,12 +44,14 @@
   <!--Texto que aparece en el NAV-->
     <div id="pags" class="center">
         <div id="home" class="flex-item">
-            <h1 class="flex-item">Welcome to our page!</h1>
-            <h5 class="flex-item">On this page you can find any movie you want to see, also a random recommendation, the best rated movies and you can search for any movie you want.</h5>
+            <h1 id="title" class="flex-item">Welcome to our page!</h1>
+            <h5 id="homeText" class="flex-item">On this page you can find any movie you want to see, also a random recommendation, the best rated movies and you can search for any movie you want.</h5>
         </div>
 
-          <div id="reco">
+          <div id="reco" class="display">
             <h1>The random recomendation is...</h1>
+            <p id="peliRandom"></p>
+            <img height="250px" width="auto" id="imgRandom" alt="">
           </div>
         
         <div id="topp">
