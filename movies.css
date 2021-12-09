@@ -6,23 +6,22 @@
 
 /*Color Body*/
 body {
-    background-color: #22254b;
+    background-color: rgb(89, 33, 116);
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
 /*Nav justificaciones*/
 header {
-    background-color: #373b69;
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding: 0.075rem;
 }
 
 /*Buscador*/
 .search {
-    background-color: transparent;
-    border: 2px solid #22254b;
+    background-color: rgb(234, 174, 240);
+    border: 2px cornsilk;
     border-radius: 50px;
     color: #fff;
     font-family: inherit;
@@ -31,11 +30,11 @@ header {
 }
 
 .search::placeholder {
-    color: #7378c5;
+    color: #ae73c5;
 }
 
 .search:focus {
-    background-color: #22254b;
+    background-color: rgb(164, 77, 172);
     outline: none;
 }
 
@@ -43,22 +42,25 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 /*Propiedades a cada peli (espacio que ocupa en la pag, póster,
 info, título, rating)*/
 .movie {
-    background-color: #373b69;
+    background-color: rgb(73, 12, 92);
     border-radius: 3px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
     margin: 1rem;
     width: 300px;
+    cursor: pointer;
+    float: left;
 }
 
 .movie img {
-    width: 100%;
+    width: 300px;
+    height: 460px;
 }
 
 .movie-info {
@@ -68,15 +70,18 @@ info, título, rating)*/
     justify-content: space-between;
     padding: 0.5rem 1rem 1rem;
     letter-spacing: 0.5px;
+    width: 300px;
+    height: 70px;
 }
 
 .movie-info h3 {
     margin: 0;
+    font-size: medium;
 }
 
 .movie-info span {
-    background-color: #22254b;
-    border-radius: 100%;
+    background-color: #1c0127;
+    border-radius: 3px;
     font-weight: bold;
     padding: 0.25rem 0.5rem;
 }
@@ -94,7 +99,7 @@ info, título, rating)*/
 
 /*Resumen de la peli*/
 .overview {
-    background-color: #fff;
+    background-color: rgb(198, 108, 206);
     padding: 2rem;
     position: absolute;
     max-height: 100%;
@@ -112,4 +117,49 @@ info, título, rating)*/
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+#incioP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bInicio{
+    cursor: pointer;
+    font-weight: bolder;    
+}
+
+button{
+    cursor: pointer;
+}
+
+#home{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 800px;
+}
+
+.center , .flex{
+    display: flex;
+}
+
+.flex-container{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-item {
+    padding: 5px;
+    width: 800px;
+    margin: 10px;
+    text-align: center;
+  }
+
+/*Block*/
+#navv , #pags , #home, #reco, #topp , #searchh , #main{
+    display: none;
 }

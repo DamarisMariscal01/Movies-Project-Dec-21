@@ -6,52 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <script src="./randomPelis.js"></script>
-    <link rel="stylesheet" href="./randomPelis.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="movies.css".css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <title>Random Pelis</title>
 </head>
 <body>
   <!--Inicio-->
-    <div id="inicioP" onclick="inicioCosas()">
+    <div id="inicioP" class="flex-container" onclick="inicioCosas()">
         <h1 id="bInicio">Random Pelis</h1>
         <p>by Damaris</p>
     </div>
 
-  <!--Navegador-->  
+  <!--Navegador-->
     <div id="navv" onclick="navCosas()" class="nav nav-tabs" id="nav-tab" role="tablist">
       <button onclick="homee()" class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
       <button onclick="recoo()" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Recomendation</button>
       <button onclick="toppP()" class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Top Movies</button>
-      <form class="d-flex">
-        <input id="inputt" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <!--<form id="form" class="d-flex">
+        <input id="searchh" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button onclick="searchh()" id="buscador" class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+      </form>-->
+      <header>
+        <form id="form">
+          <input type="text" id="searchh" placeholder="Search" class="search"/>
       </form>
+      </header>
+      
     </div>
   </nav>
 
   <!--Texto que aparece en el NAV-->
-    <div id="pags">
-        <div id="home">
-            <h1>Welcome to our page!</h1>
-            <h5>Here you can find any movie you want to watch, recomendations, the top 10 of the most view movies, and much other things.</h5>
-            <p>You can start looking for information of movies you want to watch :)</p>
+    <div id="pags" class="center">
+        <div id="home" class="flex-item">
+            <h1 class="flex-item">Welcome to our page!</h1>
+            <h5 class="flex-item">On this page you can find any movie you want to see, also a random recommendation, the best rated movies and you can search for any movie you want.</h5>
         </div>
-        <div id="reco">
+
+          <div id="reco">
             <h1>The random recomendation is...</h1>
-            <p id="recoRan"></p>
-        </div>
+          </div>
+        
         <div id="topp">
             <h1>Top Movies</h1>
             <p id="topPel"></p>
         </div>
-        <div id="search">
-          <p>Holis</p>
+        <div id="buscar">
+          <p>Similar Titles:</p>
         </div>
   </div>
-    <nav>
+  <div id="main"></div>
 </body>
+<!--<script src="./java.js"></script>-->
+<script src="./movies.js"></script>
+
 </html>
